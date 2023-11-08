@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.modal-close {
+    display: flex;
+    width: auto;
+    align-items: center;
+    position: absolute;
+    height: auto;
+    margin-top: 10px;
+    justify-content: center;
+    right: 0;
+    transition: all 0.3s ease;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.modal-close svg{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(230%);
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-close svg:hover{
+    border-color: #ffffff;
+}
+
+.modal-close p {
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #c0c0c0;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 85vh;
+    transform: translate(-50%, -50%); /* Déplacer le modal de 50% vers le haut et la gauche */
+    background-color: #181818; /* Fond semi-transparent */
+    /*justify-content: center;*/
+    align-items: center;
+    color: #ffffff;
+    border-radius: 30px;
+    text-align: center;
+    z-index: 6;
+    overflow: hidden;
+}
+
+.subscribe h1 {
+    margin-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.subscribe-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+    gap: 10px;
+}
+
+.basic, .premium, .ultra-premium {
+    display: flex;
+    width: calc(100% / 3);
+    border: solid 2px white; /* Utilisation d'une bordure transparente */
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: border-color 0.3s ease; /* Animation de la couleur de la bordure */
+}
+
+.basic:hover {
+    border-color: rgb(88, 255, 110); /* Changement de couleur de la bordure au survol */
+    background: linear-gradient(to top, rgba(88, 255, 110, 0.1), transparent); /* Dégradé pour l'arrière-plan */
+}
+
+.premium:hover {
+    border-color: rgb(88, 91, 255); /* Changement de couleur de la bordure au survol */
+    background: linear-gradient(to top, rgba(88, 91, 255, 0.1), transparent); /* Dégradé pour l'arrière-plan */
+}
+
+.your-subscription {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20% !important;
+}
+
+.ultra-premium:hover {
+    border-color: rgb(255, 88, 88); /* Changement de couleur de la bordure au survol */
+    background: linear-gradient(to top, rgba(255, 88, 88, 0.1), transparent); /* Dégradé pour l'arrière-plan */
+}
+
+
+.subscribe-border {
+    display: flex;
+    position: relative;
+    width: calc(100% / 3);
+    height: 100%;
+    background-color : green;
+    z-index: 7;
+}
+
+.subscribe-list .advantage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 90%;
+    height: 70%;
+}
+
+.subscribe-list .advantage li {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.subscribe-list .checked {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex: 0 0 1.25rem;
+    margin-right: 0.375rem;
+}
+
+.subscribe-list .price {
+    padding-top: 10px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+
+.subscribe-list .price span {
+    font-size : 20px;
+    color: #9b9b9b;
+}
+
+.subscribe-list button {
+    width: 90%;
+}
+
+.subscribe .account-share {
+    margin-top: auto;
+    margin-bottom: auto;
+    color : #9b9b9b;
+}
+
+@media screen and (max-width: 730px) {
+    .basic, .premium, .ultra-premium {
+        margin-right: 10px;
+        width: 60vw;
+    }
+    .subscribe button {
+        margin-bottom: 10%;
+    }
+    .subscribe-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow: auto;
+    }
+}

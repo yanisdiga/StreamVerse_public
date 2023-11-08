@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #000000;
+}
+
+/* Style pour le conteneur de la vidéo */
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    /* Ajoutez ceci pour permettre le défilement si nécessaire */
+    overflow: auto;
+}
+
+/* Style pour la vidéo elle-même */
+#videoPlayer {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.blur-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(10px); /* Applique le flou */
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.not-subscribed {
+    display: none; /* Cachez le modal par défaut */
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30vw;
+    height: 50vh;
+    transform: translate(-50%, -50%); /* Déplacer le modal de 50% vers le haut et la gauche */
+    background-color: #181818; /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 30px;
+    text-align: center;
+    z-index: 6;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #c0c0c0;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.button-container {
+    display: flex;
+    width: 90%;
+    margin-top: auto;
+    margin-bottom: 5%;
+}
+
+#video-container iframe {
+    width: 100%;
+    height: 100%;
+}
