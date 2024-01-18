@@ -1,5 +1,5 @@
 # StreamVerse
-An streaming website
+An streaming website template
 ![StreamVerse](https://github.com/yanisdiga/StreamVerse_public/assets/79532818/56ae8a6a-ac40-4215-a8c2-68fbe2e0ff55)
 # Installation
 Notice : you must have nodejs an azure account for the storage and a database (here i use oracledb)
