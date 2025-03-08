@@ -2,7 +2,7 @@
 
 A modern streaming website template with user authentication, content management, and Azure integration. Built with Node.js and Oracle Database.
 
-![StreamVerse Preview](https://github.com/yanisdiga/StreamVerse_public/assets/79532818/56ae8a6a-ac40-4215-a80c-68fbe2e0ff55)
+![StreamVerse](https://github.com/yanisdiga/StreamVerse_public/assets/79532818/56ae8a6a-ac40-4215-a8c2-68fbe2e0ff55)
 
 ## ✨ Features
 - **User authentication system** with bcrypt password hashing
